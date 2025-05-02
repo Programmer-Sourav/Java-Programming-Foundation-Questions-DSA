@@ -32,6 +32,7 @@ public class MaximumSumSubarray {
     }
 
     //Maximum Sum SubArray
+    //Kadane's Algorithm: Dynamic programming approach to find the maximum subarray sum in O(n) time.
     //    Pattern:
     //    This problem asks us to find the subarray with the maximum sum.
    //    Approach:

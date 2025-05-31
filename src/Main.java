@@ -1,14 +1,4 @@
-import FirstSlowPointers.DetectingCyclesInALinkedList;
-import FirstSlowPointers.FindingMiddleElementOfLL;
-import FirstSlowPointers.IntersectionPointOfTwoLL;
-import FirstSlowPointers.ListNode;
-import TwoPointers.LongestPalindromSubstring;
-import TwoPointers.MaximumSumSubarray;
-import basic_string_manipulation.FrequencyOfWords;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import FindHotelRoomsCount.FindNumberOfRooms;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -127,6 +117,10 @@ public class Main {
         ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
         int [] resultant = productOfArrayExceptSelf.getProductOfTheArray(inputA);
         System.out.print("Product Of Array Except Self "+resultant);
+
+        FindNumberOfRooms findNumberOfRooms = new FindNumberOfRooms();
+        String resultantRoomsByTwo = findNumberOfRooms.findNumberOfRooms(6);
+        System.out.print("Rooms By 2 "+resultantRoomsByTwo);
 
     }
 }

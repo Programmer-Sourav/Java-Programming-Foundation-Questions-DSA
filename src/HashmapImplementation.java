@@ -95,9 +95,10 @@ private ArrayList<BucketNode> buckets = new ArrayList<>(BUCKET_SIZE);
         // Simple hash function based on characters
         for (int i = 0; i < key.length(); i++) {
             hash = hash * prime + key.charAt(i);
+            System.out.print("\n Hash2 "+ hash);
         }
 
-        return Math.abs(hash % INITIAL_CAPACITY);
+        return Math.abs(hash % prime);
     }
 
     private int calculateHashCodeForKey(String key){
@@ -111,11 +112,12 @@ private ArrayList<BucketNode> buckets = new ArrayList<>(BUCKET_SIZE);
             //suppose for each character some value can be assigned to generate a int key.
         }
         catch (NumberFormatException exception){
-            System.out.print("Input Key is not a Number "+ exception);
+            System.out.print("\n Input Key is not a Number "+ exception);
 
             for(int i =0; i<key.length(); i++){
                 char ch = key.charAt(i);
                 hashCode = hashCode*anyPrimeNumber + ch;
+                System.out.print("\n Hash1 "+ hashCode);
             }
             hashCode = Math.abs(hashCode % anyPrimeNumber);
         }
@@ -128,9 +130,45 @@ private ArrayList<BucketNode> buckets = new ArrayList<>(BUCKET_SIZE);
         hashmapImplementation.put("apple", 100);
         hashmapImplementation.put("banana", 200);
         hashmapImplementation.put("apple", 300); // Test key overwrite
+        hashmapImplementation.put("1", 111);
+//        hashmapImplementation.put("2", 222);
+//        hashmapImplementation.put("3", 333); // Test key overwrite
+//        hashmapImplementation.put("4", 121);
+//        hashmapImplementation.put("5", 221);
+//        hashmapImplementation.put("6", 321); // Test key overwrite
+//        hashmapImplementation.put("7", 131);
+        hashmapImplementation.put("kiwi", 231);
+        hashmapImplementation.put("banana", 331); // Test key overwrite
+        hashmapImplementation.put("strawberry", 141);
+//        hashmapImplementation.put("vanilla", 241);
+        hashmapImplementation.put("strawberry", 342); // Test key overwrite
 
         System.out.print("\n HashMap Remove method, ");
+        System.out.print("\n Strawberry");
+        hashmapImplementation.get("strawberry");
+        System.out.print("\n apple");
         hashmapImplementation.get("apple");
+        System.out.print("\n 1");
+        hashmapImplementation.get("1");
+//        System.out.print("2");
+//        hashmapImplementation.get("2");
+//        System.out.print("3");
+//        hashmapImplementation.get("3");
+//        System.out.print("4");
+//        hashmapImplementation.get("4");
+//        System.out.print("5");
+//        hashmapImplementation.get("5");
+//        System.out.print("7");
+//        hashmapImplementation.get("7");
+        System.out.print("\n Kiwi");
+        hashmapImplementation.get("kiwi");
+        System.out.print("\n Banana");
+        hashmapImplementation.get("banana");
+//        System.out.print("Vanilla");
+//        hashmapImplementation.get("vanilla");
+
+
+
     }
 }
 
